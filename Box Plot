@@ -1,2 +1,4 @@
 diabetes_distribution <- boxplot(diabetes_df$Age)
 log_diabetes_distribution <- boxplot(log(diabetes_df$Age))
+
+The average age from the total patients who have diabetes is 8 years old as seen in the box plot as well.
