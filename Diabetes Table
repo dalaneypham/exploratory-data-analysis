@@ -1,0 +1,18 @@
+library(dplyr)
+
+diabetes_df <- read.csv("/Users/ginatran/Downloads/diabetes_012_health_indicators_BRFSS2015.csv")
+
+age <- diabetes_df[, c('Age')]
+
+physical_activity <- diabetes_df[, c('PhysActivity')]
+
+BMI <- diabetes_df[, c('BMI')]
+
+high_bp <- diabetes_df[,c ('HighBP')]
+
+diabetes_count <- diabetes_df[, c ('Diabetes_012')]
+
+# create a data frame using the selected columns and column names
+# displays column Age, PhysActivity, BMI, HighBP, Diabetes_012
+
+diabetes_table <- diabetes_df[,c("Diabetes_012", "Age", "PhysActivity", "BMI", "HighBP")]
