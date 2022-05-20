@@ -1,0 +1,2 @@
+diabetes_distribution <- boxplot(diabetes_df$Age)
+log_diabetes_distribution <- boxplot(log(diabetes_df$Age))
