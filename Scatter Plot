@@ -1,0 +1,11 @@
+input <- diabetes_df[,c('BMI','Diabetes_012')]
+print(head(input))
+plot(x = input$BMI, y = input$Diabetes_012,
+     xlab = "BMI",
+     ylab = "Diabetic",
+     xlim = c(0,98),
+     ylim = c(0,2),		 
+     main = "BMI Correlation to Diabetes"
+)
+
+From the scatter plot, we can see that a small amount of patients that were classified as prediabetic had a BMI of about 80-100.
