@@ -16,3 +16,26 @@ diabetes_count <- diabetes_df[, c ('Diabetes_012')]
 # displays column Age, PhysActivity, BMI, HighBP, Diabetes_012
 
 diabetes_table <- diabetes_df[,c("Diabetes_012", "Age", "PhysActivity", "BMI", "HighBP")]
+
+#printing new data frame
+
+print("diabetes_table")
+print(diabetes_table)
+
+print("Renaming columns names ")
+
+# assigning new names to the columns of the data frame
+colnames(diabetes_table) <- c('Diabetes','Age','PhysActivity', 'BMI', 'HighBP')
+
+# printing new data frame
+print(diabetes_table)
+print(diabetes_table)
+
+* Table Summary
++ I included these 5 variables in my table because these seemed the most generic and useful information. 
++The other variables were not irrelevant to personal health such as education and insurance.
++ Diabities was included because this what our topic is about.
++ Age is important to determine the range of ages for diabetes
++ PhysActivity shows how diabetes flunctuates.
++ BMI shows the risk of diabetes.
++ HighBP increases risk of diabetes 1 or diabetes 2.
