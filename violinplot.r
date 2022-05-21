@@ -1,0 +1,11 @@
+library(dplyr)
+
+diabetes <- read.csv("/Users/meganstoppler/Downloads/diabetes_012_health_indicators_BRFSS2015.csv")
+
+# distribution of age for each diabetes group
+ggplot(data = diabetes_df, aes(x = DiabetesClass, y = Age, fill = DiabetesClass)) +
+  geom_violin() +
+  labs(x = "Class of Diabetes", y = "Age") +
+  scale_fill_manual(name = "Class of Diabetes", 
+                    values = c("steelblue", "gray35", "lightslategray"), 
+                    labels = c("No Diabetes", "Prediabetes", "Diabetes"))
