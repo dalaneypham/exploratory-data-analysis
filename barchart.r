@@ -32,6 +32,8 @@ ggplot(data = barchart_df, aes(x = BMI, y = NumberofCases, fill = DiabetesClass)
   geom_bar(position = position_stack(reverse = TRUE), stat = "identity") +
   ggtitle("Cases of Diabetes vs BMI") +
   ylab("Number of Cases") +
-  scale_fill_manual(name = "Diabetes Class", labels = c("0", "1", "2"), values = color_order) +
+  scale_fill_manual(name = "Diabetes Class", 
+                    labels = c("No Diabetes", "Prediabetes", "Diabetes"), 
+                    values = color_order) +
   scale_x_discrete(name = "BMI")
 
