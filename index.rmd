@@ -1,0 +1,7 @@
+---
+title: "index.rmd"
+output: html_document
+date: '2022-05-21'
+---
+
+The data was downloaded from Kaggle and was collected from the Behavioral Risk Factor Surveillance System telephone survey that is annually collected by the CDC. This 2015 report consists of responses to surveys by Americans and questions them on health-related risk behaviors, chronic health conditions, and the use of preventative services. There are 253,680 rows in the dataset, which indicate a sample size of 253,680 patients that were surveyed. There are 22 columns in the dataset, indicating 22 variables that the survey aimed to analyze.This data will help us analyze how lifestyle choices can impact one's health and their access to appropriate types of care.
