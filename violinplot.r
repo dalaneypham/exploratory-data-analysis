@@ -7,5 +7,5 @@ ggplot(data = diabetes_df, aes(x = DiabetesClass, y = Age, fill = DiabetesClass)
   geom_violin() +
   labs(x = "Class of Diabetes", y = "Age") +
   scale_fill_manual(name = "Class of Diabetes", 
-                    values = c("steelblue", "gray35", "lightslategray"), 
+                    values = c("steelblue", "gold3", "gray45"), 
                     labels = c("No Diabetes", "Prediabetes", "Diabetes"))
