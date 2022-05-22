@@ -19,9 +19,9 @@ diabetes_df_byage <- diabetes %>%
             cases = sum(count))
 
 # change column names to be readable
-colnames(diabetes_df) <- c("BMI", "DiabetesClass", "PhysicalActivity", 
+colnames(diabetes_df_byage) <- c("Age", "DiabetesClass", "PhysicalActivity", 
                            "HighBloodPressure", "HighCholesterol", "Smoker", 
-                           "GeneralHealth", "Age", "NumberofCases")
+                           "GeneralHealth", "BMI", "NumberofCases")
 
 
 # * Table Summary

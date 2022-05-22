@@ -3,6 +3,9 @@ library(dplyr)
 diabetes <- read.csv("/Users/meganstoppler/Downloads/diabetes_012_health_indicators_BRFSS2015.csv")
 
 # distribution of age for each diabetes group
+# Age plotted on the y xis
+# each color represents a diabetes class
+
 ggplot(data = diabetes_df, aes(x = DiabetesClass, y = Age, fill = DiabetesClass)) +
   geom_violin() +
   labs(x = "Class of Diabetes", y = "Age") +

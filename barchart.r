@@ -2,28 +2,10 @@ library(dplyr)
 
 diabetes <- read.csv("/Users/meganstoppler/Downloads/diabetes_012_health_indicators_BRFSS2015.csv")
 
-# bar chart for diabetes
-Diabetes_df <- diabetes %>%
-  filter(Diabetes_012 == 2)
-
-ggplot(data = Diabetes_df, aes(x = BMI)) +
-  geom_bar()
-
-# bar chart for prediabetes
-Prediabetes_df <- diabetes %>%
-  filter(Diabetes_012 == 1)
-
-ggplot(data = Prediabetes_df, aes(x = BMI)) +
-  geom_bar()
-
-# bar chart for no diabetes
-NoDiabetes_df <- diabetes %>%
-  filter(Diabetes_012 == 0)
-
-ggplot(data = NoDiabetes_df, aes(x = BMI)) +
-  geom_bar()
-
 # bar chart combining diabetes data
+# BMI plotted on the x axis, number of cases plotted on the y xis
+# each color represents a diabetes class
+
 barchart_df <- diabetes_df %>%
   filter(BMI < 50)
 
