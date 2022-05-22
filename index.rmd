@@ -15,6 +15,26 @@ source("barchart.R")
 source("violinplot.R")
 ```
 
-The table below shows the results of the survey grouped by the age of the patient. There were 14 age groups created by the survey with the first thirteen groups including five year age intervals ranging from age 18 to 80+. The 14th group was to indicated missing or ages that were refused to be disclosed. 
+The table below shows the results of the survey grouped by the age of the patient. There were 14 age groups created by the survey with the first thirteen groups including five year age intervals ranging from age 18 to 80+. The 14th group was to indicated missing or ages that were refused to be disclosed. Some relevant observations in this table include the displayed increase in the high cholesterol, and high blood pressure values as age increased. The amount of physical activity also seemed to decrease with increasing age in diabetic patients.
+
 ```{r echo = FALSE}
 kable(diabetes_df_byage)
+```
+
+The scatterplot below was intended to show the relationship between the Age of patients and their BMI depending on whether they are nondiabetic, prediabetic, or diabetic. According to the plot, the highest BMIs were seen to occur around the 40 year old mark for all three groups. Furthermore, those who are prediabetic or diabetic had the highest BMI values overall relative to nondiabetic patients, with diabetic patients having the highest.
+
+```{r echo = FALSE, fig.align = "center"}
+plot(scatter)
+```
+
+The violin plot below was intended to show the relationship between the Age of patients and which class of diabetes was most prevalent in certain age ranges. The data shows that the bulk of prediabetes and diabetes cases were prevalent in patients aged 55-64, whereas most nondiabetic cases occurred in patients aged 45-55. This indicates a greater risk for diabetes and prediabetes with increasing age. 
+
+```{r echo = FALSE, fig.align = "center"}
+plot(violin)
+```
+
+The barchart below was intended to show the relationship between BMI and the number of cases of nondiabetic, prediabetic, and diabetic patients. This graph shows us that the majority of patients that were nondiabetic had BMIs that were within the 20-32 range while those who were diabetic were mostly above the 30 mark. This trend may indicate a potential correlation between increasing BMI and risk for diabetes. 
+
+```{r echo = FALSE, fig.align = "center"}
+plot(barchart)
+```

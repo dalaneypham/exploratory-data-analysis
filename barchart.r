@@ -28,11 +28,11 @@ barchart_df <- diabetes_df %>%
   filter(BMI < 50)
 
 color_order <- c("steelblue", "gold3", "gray45")
-ggplot(data = barchart_df, aes(x = BMI, y = NumberofCases, fill = DiabetesClass)) +
+barchart <- ggplot(data = barchart_df, aes(x = as.factor(BMI), y = cases, fill = classdiabetes)) +
   geom_bar(position = position_stack(reverse = TRUE), stat = "identity") +
-  ggtitle("Cases of Diabetes vs BMI") +
+  ggtitle("Number of Diabetes Cases vs BMI Between Each Diabetes Class") +
+  theme(plot.title = element_text(hjust = 0.5)) +
   ylab("Number of Cases") +
   scale_fill_manual(name = "Diabetes Class", 
                     labels = c("No Diabetes", "Prediabetes", "Diabetes"), 
-                    values = color_order) +
-  scale_x_discrete(name = "BMI")
+                    values = color_order)

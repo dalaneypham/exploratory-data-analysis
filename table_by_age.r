@@ -20,19 +20,19 @@ diabetes_df_byage <- diabetes %>%
 
 diabetes_df <- diabetes %>%
   select(Age, classdiabetes, PhysActivity, BMI, HighBP, HighChol, Smoker, GenHlth, count) %>%
-  group_by(Age, classdiabetes) %>%
+  group_by(BMI, classdiabetes) %>%
   summarize(physical_activity = round(mean(PhysActivity), 1), 
             high_bp = round(mean(HighBP), 1), 
             high_chol = round(mean(HighChol), 1), 
             smoker = round(mean(Smoker), 1), 
             genhealth = round(mean(GenHlth), 1),
-            BMI = round(mean(BMI), 1), 
+            Age = round(mean(Age), 1), 
             cases = sum(count))
 
 # change column names to be readable
-colnames(diabetes_df_byage) <- c("Age Group", "Diabetes Class", "Physical Activity", 
-                           "High Blood Pressure", "High Cholesterol", "Smoker", 
-                           "General Health", "BMI", "Number of Cases")
+colnames(diabetes_df_byage) <- c("Age", "DiabetesClass", "PhysicalActivity", 
+                           "HighBloodPressure", "HighCholesterol", "Smoker", 
+                           "GeneralHealth", "BMI", "NumberofCases")
 
 
 # * Table Summary
