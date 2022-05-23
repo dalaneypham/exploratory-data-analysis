@@ -1,6 +1,8 @@
 library(dplyr)
 
-diabetes <- read.csv("/Users/meganstoppler/Downloads/diabetes_012_health_indicators_BRFSS2015.csv")
+#diabetes <- read.csv("/Users/meganstoppler/Downloads/diabetes_012_health_indicators_BRFSS2015.csv")
+
+diabetes <- read.csv("https://raw.githubusercontent.com/info201b-2022-spring/final-projects-achandru1/main/data/diabetes_012_health_indicators_BRFSS2015.csv?token=GHSAT0AAAAAABUCQWQBSOZIXFGNKLVZL262YUKW2LQ")
 
 # adding a column to total the number of cases for each BMI/Diabetes group
 diabetes <- mutate(diabetes, count = 1)
