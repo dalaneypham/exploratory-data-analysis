@@ -1,4 +1,5 @@
 library(dplyr)
+library(ggplot2)
 
 diabetes <- read.csv("/Users/meganstoppler/Downloads/diabetes_012_health_indicators_BRFSS2015.csv")
 
@@ -16,6 +17,12 @@ age_BMI_df <- diabetes_df %>%
 
 # scatter plot comparing age vs BMI
 ggplot(data = age_BMI_df, aes(x = Age)) +
+  geom_point(aes(y = BMI)) +
+  ggtitle("Age vs BMI") +
+  labs(x = "Age", y = "BMI")
+
+# scatter plot with group by age
+ggplot(data = diabetes_df_byage, aes(x = Age)) +
   geom_point(aes(y = BMI)) +
   ggtitle("Age vs BMI") +
   labs(x = "Age", y = "BMI")
