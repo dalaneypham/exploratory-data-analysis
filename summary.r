@@ -1,5 +1,5 @@
- library("dplyr")
-library("tidyverse")
+library(dplyr)
+library(tidyverse)
 
 diabetes <- read.csv("/Users/meganstoppler/Downloads/diabetes_012_health_indicators_BRFSS2015.csv")
 

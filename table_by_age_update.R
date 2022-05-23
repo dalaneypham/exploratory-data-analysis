@@ -1,4 +1,5 @@
 library(dplyr)
+library(tidyverse)
 
 diabetes <- read.csv("https://raw.githubusercontent.com/dalaneypham/exploratory-data-analysis/main/diabetes_012_health_indicators_BRFSS2015.csv")
 
@@ -7,6 +8,7 @@ diabetes <- mutate(diabetes, count = 1)
 diabetes <- mutate(diabetes, classdiabetes = as.character(Diabetes_012))
 
 # data frame including important values
+# data frame grouped by age and class of diabetes for scatter plot
 diabetes_df_byage <- diabetes %>%
   select(Age, classdiabetes, PhysActivity, BMI, HighBP, HighChol, Smoker, GenHlth, count) %>%
   group_by(Age, classdiabetes) %>%
@@ -17,7 +19,7 @@ diabetes_df_byage <- diabetes %>%
             genhealth = round(mean(GenHlth), 1),
             BMI = round(mean(BMI), 1), 
             cases = sum(count))
-
+# data frame grouped by BMI and class of diabetes for bar chart and violin plot
 diabetes_df <- diabetes %>%
   select(Age, classdiabetes, PhysActivity, BMI, HighBP, HighChol, Smoker, GenHlth, count) %>%
   group_by(BMI, classdiabetes) %>%
@@ -34,12 +36,7 @@ colnames(diabetes_df_byage) <- c("Age", "DiabetesClass", "PhysicalActivity",
                            "HighBloodPressure", "HighCholesterol", "Smoker", 
                            "GeneralHealth", "BMI", "NumberofCases")
 
+colnames(diabetes_df) <- c("BMI", "DiabetesClass", "PhysicalActivity", 
+                                 "HighBloodPressure", "HighCholesterol", "Smoker", 
+                                 "GeneralHealth", "Age", "NumberofCases")
 
-# * Table Summary
-# + I included these 5 variables in my table because these seemed the most generic and useful information. 
-# + The other variables were not irrelevant to personal health such as education and insurance.
-# + Diabities was included because this what our topic is about.
-# + Age is important to determine the range of ages for diabetes
-# + PhysActivity shows how diabetes flunctuates.
-# + BMI shows the risk of diabetes.
-# + HighBP increases risk of diabetes 1 or diabetes 2.
