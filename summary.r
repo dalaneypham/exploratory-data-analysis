@@ -1,7 +1,7 @@
 library(dplyr)
 library(tidyverse)
 
-diabetes <- read.csv("/Users/meganstoppler/Downloads/diabetes_012_health_indicators_BRFSS2015.csv")
+diabetes <- read.csv("https://raw.githubusercontent.com/dalaneypham/exploratory-data-analysis/main/diabetes_012_health_indicators_BRFSS2015.csv")
 
 # make an empty list
 summary_info <- list()
